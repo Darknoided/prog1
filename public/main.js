@@ -22,3 +22,8 @@ btAdicionar.onclick = function () {
     criarTarefa(texto)
     inputAdicionar.value = ''
 }
+
+inputAdicionar.addEventListener('keypress', (evt) => {
+    if (evt.key !== 'Enter') return;
+    btAdicionar.click()
+})
